@@ -21,12 +21,12 @@
 }
 
 .cPlatformTitle:hover {
-    color: white;
+    color: white!important;
 }
 
 .customHeader {
-    background-color: #131a21;
-    height: 37px;
+    background-color: #131a21!important;
+    height: 37px!important;
 }
 
 .customFooter {
@@ -34,7 +34,7 @@
     justify-content: center;
     box-sizing: border-box;
     background-color: #1a252d;
-    height: 85px;
+    height: 85px!important;
 }
 
 .logo {
@@ -46,7 +46,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    min-height: 36px;
+    min-height: 36px!important;
 }
 
 .customSections {
