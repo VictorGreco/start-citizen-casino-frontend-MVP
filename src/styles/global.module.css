@@ -7,7 +7,7 @@
     align-items: center;
     position: relative;
     z-index: 1;
-    color: #7e7e7e;
+    color: #7e7e7e!important;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 500;
