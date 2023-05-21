@@ -1,11 +1,11 @@
-import { Header } from '../components/common/Header';
+import { StyledHeader } from '../components/common/StyledHeader';
 import { StyledFooter } from '../components/common/StyledFooter';
 
 function AuthApp({ Component, pageProps }) {
 
   return (
     <>
-        {<Header />}
+        {<StyledHeader />}
         <Component {...pageProps} />
         {<StyledFooter />}
     </>

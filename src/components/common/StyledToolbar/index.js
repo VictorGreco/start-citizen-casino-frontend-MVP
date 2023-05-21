@@ -5,7 +5,7 @@ import { styled } from '@mui/system';
 const StyledComponent = styled(Toolbar)({
   display: "flex",
   justifyContent: "space-between",
-  minHeight: "36px"
+  minHeight: "36px!important"
 })
 
 export const StyledToolbar = ({children}) => {

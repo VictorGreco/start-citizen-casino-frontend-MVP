@@ -17,7 +17,7 @@ export const StyledFooter = () => {
   return (
     <StyledComponent >
         <StyledToolbar disableGutters>
-          <StyledTitleTypography>
+          <StyledTitleTypography href="/">
             <StyledLogo />
             RSI Great Luck
             <copy> © 2012-2023</copy>

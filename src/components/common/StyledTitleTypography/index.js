@@ -17,16 +17,19 @@ const StyledComponent = styled(Typography)({
   transition: "color .3s cubic-bezier(.4,.44,.26,1.01)",
   fontFamily: "univia-pro,sans-serif",
   boxSizing: "inherit",
+  "&:hover": {
+    color: "white!important",
+  }
 })
 
-export const StyledTitleTypography = ({ children }) => {
+export const StyledTitleTypography = ({ children, href }) => {
 
   return (
     <StyledComponent
     variant="h6"
     noWrap
     component="a"
-    href="/"
+    href={href}
     sx={{
         mr: 2,
         fontFamily: 'monospace',
