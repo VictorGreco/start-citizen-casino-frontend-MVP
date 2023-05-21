@@ -5,11 +5,11 @@ import { StyledToolbar } from "../StyledToolbar";
 import { styled } from '@mui/system';
 
 const StyledComponent = styled("footer")({
-  display: "flex",
-  justifyContent: "center",
-  boxSizing: "border-box",
-  backgroundColor: "#1a252d",
-  height: "85px"
+  display: "flex!important",
+  justifyContent: "center!important",
+  boxSizing: "border-box!important",
+  backgroundColor: "#1a252d!important",
+  height: "85px!important"
 })
 
 export const StyledFooter = () => {
