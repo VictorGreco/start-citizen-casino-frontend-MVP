@@ -1,5 +1,5 @@
 import { Header } from '../components/common/Header';
-import { Footer } from '../components/common/Footer';
+import { StyledFooter } from '../components/common/StyledFooter';
 
 function AuthApp({ Component, pageProps }) {
 
@@ -7,7 +7,7 @@ function AuthApp({ Component, pageProps }) {
     <>
         {<Header />}
         <Component {...pageProps} />
-        {<Footer />}
+        {<StyledFooter />}
     </>
   );
 }
