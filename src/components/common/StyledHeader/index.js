@@ -7,8 +7,10 @@ import { StyledTitleTypography } from "../StyledTitleTypography";
 import { StyledToolbar } from "../StyledToolbar";
 import { LogginLight } from "../LogginLight";
 import { StyledBox } from "../StyledBox";
+import { StyledDrawer } from '../StyledDrawer';
 
 import { styled } from '@mui/system';
+import { StyledButton } from '../StyledButton';
 
 const StyledComponent = styled(AppBar)({
   backgroundColor: "#131a21!important",
@@ -17,12 +19,15 @@ const StyledComponent = styled(AppBar)({
 
 export const StyledHeader = () => {
   const [user, setUser] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const pages = [
     { section: "Raffle", href: "/raffle" },
     { section: "Coinflip", href: "/coinflip" },
-    { section: "Account", href: "/account"}
+    { section: "Account" }
   ];
+
+  const toggleDrawer = () => setIsOpen(!isOpen);
 
   return (
     <StyledComponent position="static">
@@ -34,16 +39,29 @@ export const StyledHeader = () => {
           </StyledTitleTypography>
 
           <StyledBox>
-            {pages?.map(({ section, href }) => (
+            {pages?.map(({ section, href }) => {
+
+              return href ?
               <StyledTitleTypography
-              key={section}
-              href={href}
+                key={section}
+                href={href}
               >
                 {section}
               </StyledTitleTypography>
-            ))}
-            <LogginLight user={user} />
+              :
+              <StyledButton
+                key={section}
+                onClickHandler={toggleDrawer}
+              >
+                {section}
+              </StyledButton>
+            })}
+            <LogginLight user={user} isOpen={isOpen} />
           </StyledBox>
+
+          <StyledDrawer isOpen={isOpen} toggleDrawer={toggleDrawer}>
+            div
+          </StyledDrawer>
         </StyledToolbar>
       </Container>
     </StyledComponent>
